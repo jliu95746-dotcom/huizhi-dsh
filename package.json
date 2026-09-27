@@ -1,0 +1,41 @@
+{
+  "name": "huizhi-dsh",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "企业智慧中枢的 Ubuntu DSH 命令行执行器和插件接入层",
+  "bin": {
+    "huizhi-dsh": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "node scripts/clean-dist.mjs && tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "smoke": "npm run build && node scripts/smoke.mjs",
+    "routing-demo": "npm run build && node dist/src/cli.js dispatch --input examples/command-save.json --context examples/context-mobile.json --adapter examples/routing-demo-adapter.mjs --format text",
+    "routing-smoke": "npm run build && node scripts/routing-smoke.mjs",
+    "cancel-smoke": "npm run build && node scripts/cancel-smoke.mjs",
+    "employee-cancel-smoke": "npm run build && node scripts/employee-cancel-smoke.mjs",
+    "failure-smoke": "npm run build && node scripts/failure-smoke.mjs",
+    "provider-error-smoke": "npm run build && node scripts/provider-error-smoke.mjs 401 && node scripts/provider-error-smoke.mjs 429",
+    "parent-exit-smoke": "npm run build && node scripts/parent-exit-smoke.mjs",
+    "setup": "npm run build && node dist/src/cli.js setup",
+    "doctor": "npm run build && node dist/src/cli.js doctor",
+    "audit-profile": "node scripts/audit-profile.mjs",
+    "start": "npm run build && node dist/src/cli.js run"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh": "0.1.5-rc.3",
+    "@deepseek-ai/dsh-mcp-client": "0.1.5-rc.3",
+    "@deepseek-ai/dsh-sdk-client": "0.1.5-rc.3",
+    "@modelcontextprotocol/sdk": "1.12.0",
+    "handlebars": "4.7.8",
+    "js-yaml": "4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "typescript": "5.9.3"
+  }
+}

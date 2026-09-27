@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "operations": [
+    { "id": "employee.profile.update", "executor": "business", "effect": "write", "description": "修改员工资料（主程序业务服务实现）" },
+    { "id": "weekly.generate", "executor": "dsh", "effect": "write", "description": "生成中文周报", "capability": "reports", "tool": "create_weekly_report" }
+  ]
+}

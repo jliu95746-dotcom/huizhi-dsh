@@ -1,0 +1,31 @@
+# 周报（{{period}}）
+
+## 本周完成
+
+{{#each completed}}
+- {{text}}（来源：{{joinSources sourceRefs}}）
+{{else}}
+- 暂无有依据的完成事项。
+{{/each}}
+
+## 问题与风险
+
+{{#each risks}}
+- {{text}}（来源：{{joinSources sourceRefs}}）
+{{else}}
+- 暂无有依据的风险记录。
+{{/each}}
+
+## 下周计划
+
+{{#each nextWeek}}
+- {{text}}（来源：{{joinSources sourceRefs}}）
+{{else}}
+- 暂无有依据的计划记录。
+{{/each}}
+
+## 资料来源
+
+{{#each allSources}}
+- {{this}}
+{{/each}}

@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "requestId": "demo-save-001",
+  "kind": "action",
+  "operationId": "employee.profile.update",
+  "parameters": { "employeeId": "demo-employee", "name": "示例员工" }
+}

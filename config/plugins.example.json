@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "capabilities": {
+    "files": { "enabled": false },
+    "knowledge": { "enabled": false },
+    "employeeTasks": { "enabled": false },
+    "bi": { "enabled": false },
+    "reports": { "enabled": true }
+  }
+}

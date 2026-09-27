@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "taskId": "echo-demo-001",
+  "organizationId": "demo-org",
+  "requesterId": "demo-user",
+  "prompt": "只回答：已连接。",
+  "capabilities": []
+}

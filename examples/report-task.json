@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "taskId": "weekly-demo-001",
+  "organizationId": "demo-org",
+  "requesterId": "demo-user",
+  "prompt": "请根据以下已核对的示例记录生成中文周报，调用 reports 插件创建 Markdown 文件。周期：2026-09-21 至 2026-09-27。已完成：20 条常见问题中有 16 条完成审核，来源 fixtures/weekly/2026-09-21.txt。风险：4 条常见问题待审核，来源同上。下周计划：推进剩余 4 条审核，来源同上。不要添加示例记录以外的事实。",
+  "capabilities": ["reports"]
+}

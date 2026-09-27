@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "requestId": "demo-report-001",
+  "kind": "action",
+  "operationId": "reports.create_weekly_report",
+  "parameters": {
+    "period": "2026-09-21 至 2026-09-27",
+    "completed": [{ "text": "完成 16 条常见问题审核", "sourceRefs": ["fixtures/weekly/2026-09-21.txt"] }],
+    "risks": [{ "text": "4 条常见问题待审核", "sourceRefs": ["fixtures/weekly/2026-09-21.txt"] }],
+    "nextWeek": [{ "text": "推进剩余 4 条审核", "sourceRefs": ["fixtures/weekly/2026-09-21.txt"] }]
+  }
+}
