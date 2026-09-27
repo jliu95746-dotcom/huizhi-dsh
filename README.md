@@ -20,4 +20,4 @@
 
 运行 `npm run routing-demo` 可体验手机普通业务经过企业入口而不调用模型；示例不会修改真实员工资料。正式主程序通过 `createCommandDispatcher` 接入真实权限、业务服务和电脑 Agent。旧 `runTask` 保留，用户业务分流请使用新入口。
 
-当前目录尚未初始化 Git。交接给另一台机器时，需提供项目源码和 `package-lock.json`；不要传递 `node_modules`、`dist`、运行目录或任何真实密钥。
+交接给另一台机器时，需提供项目源码和 `package-lock.json`；不要传递 `node_modules`、`dist`、运行目录或任何真实密钥。
