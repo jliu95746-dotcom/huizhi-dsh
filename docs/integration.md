@@ -2,6 +2,8 @@
 
 需要按电脑／手机和功能分流的主程序，请先按 [统一入口接入约定](command-routing.md) 使用 `createCommandDispatcher`。下文描述它在需要模型时调用的底层 `runTask` 与原 CLI `run`，这些底层入口自身不做设备分流或请求去重。每项模型任务创建独立 DSH 子进程和私有配置补丁，结束后关闭进程并删除补丁；报表留在运行目录供主程序读取。
 
+知识库专项作为完整 DSH `knowledge` 插件，按 [WeKnora 开发文档](weknora-development-plan.md) 与 [技术文档](weknora-technical-design.md) 实施：WeKnora 是插件内部引擎，插件返回授权且有效的原文证据，DSH 生成草稿，主程序的答案交付层复核引用、权限和版本后再展示。插件还拥有治理/反馈 API 与页面，但这些写操作不默认暴露为模型工具。该交付层是待实现目标；现有 `completed` 事件仅证明执行层任务完成，不证明答案已通过上述业务校验。
+
 ```mermaid
 flowchart LR
     A[其他团队的企业主程序] --> R[统一分流入口]
@@ -53,7 +55,7 @@ const result = await runTask(task, {
 
 ## 插件配置
 
-`~/.dsh-huizhi/plugins.json` 按 `config/plugins.example.json` 格式配置。外部服务可用本机 stdio 进程或 Streamable HTTP MCP 端点。一个能力对应一个 MCP 服务；本项目负责启动和选择，不实现其他团队的业务数据库。
+`~/.dsh-huizhi/plugins.json` 按 `config/plugins.example.json` 格式配置。外部服务可用本机 stdio 进程或 Streamable HTTP MCP 端点。一个能力对应一个 MCP 服务；本项目负责启动和选择，并按开发计划实现完整 `knowledge` 插件。文件、员工任务和 BI 仍由对应团队实现。
 
 本机 stdio 示例：
 

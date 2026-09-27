@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>知识库 P6 试点验收预览</title>
+  <style>
+    :root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#183044;background:#f3f6f4}
+    *{box-sizing:border-box}body{margin:0}.shell{max-width:1100px;margin:auto;padding:32px 22px 64px}
+    header{background:#113d3a;color:white;border-radius:20px;padding:28px 32px;box-shadow:0 10px 28px #143e3624}
+    h1{font-size:28px;margin:4px 0 10px}h2{font-size:19px;margin:0 0 16px}.sub{color:#cce0d9;line-height:1.6}
+    .banner{margin:22px 0;background:#fff3d7;border:1px solid #e4bd64;color:#65430c;border-radius:12px;padding:16px 20px;line-height:1.6}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid #dce7e1;border-radius:16px;padding:20px;box-shadow:0 4px 16px #26463a0c}
+    .label{font-size:13px;color:#5a746d}.value{font-size:26px;font-weight:700;margin:8px 0}.blocked{color:#a7521f}.muted{color:#61746c}
+    .section{margin-top:22px}.wide{grid-column:span 2}.pill{display:inline-block;border-radius:999px;background:#fce9e0;color:#9d491b;padding:5px 10px;font-size:12px;font-weight:700}
+    ul{margin:0;padding-left:20px;line-height:1.9}.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .row{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #e8eeea;padding:11px 0;font-size:14px}.row:first-of-type{border-top:0}
+    .small{font-size:13px;line-height:1.7;color:#5b7169}.footer{margin-top:20px;color:#60716c;font-size:13px}
+    @media(max-width:760px){.grid,.split{grid-template-columns:1fr}.wide{grid-column:auto}.shell{padding:16px}.card,header{padding:20px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="sub">慧智中枢 · knowledge 插件 · P6 合成预览</div>
+      <h1>试点与正式验收</h1>
+      <div class="sub">候选配置、评测、权限、恢复和人员签认汇总。此页仅展示产品结构，不连接业务服务。</div>
+    </header>
+    <div class="banner"><strong>当前状态：阻断正式发布。</strong> 当前仓库没有真实试点资料、模型供应商、恢复演练与业务签认。本页使用演示数据，不是验收报告。</div>
+    <div class="grid">
+      <section class="card"><div class="label">候选版本</div><div class="value">待冻结</div><div class="small">需绑定已审批提案、当前评测集、代码版本与配置指纹。</div></section>
+      <section class="card"><div class="label">硬条件 G-01～G-09</div><div class="value blocked">0 / 9</div><div class="small">每项都要有可验证的真实环境证据。</div></section>
+      <section class="card"><div class="label">业务与技术签认</div><div class="value blocked">0 / 2</div><div class="small">两位不同责任人分别确认。</div></section>
+    </div>
+    <div class="split section">
+      <section class="card"><h2>试点与质量</h2><div class="row"><span>部门试点失败案例</span><span class="pill">待提供</span></div><div class="row"><span>按资料与问题类型的质量报告</span><span class="pill">待提供</span></div><div class="row"><span>固定模型与资料的 10 并发结果</span><span class="pill">待提供</span></div><div class="row"><span>模型与配置一致性</span><span class="pill">待核验</span></div></section>
+      <section class="card"><h2>运维与交接</h2><div class="row"><span>迁移、备份恢复与回退演练</span><span class="pill">待执行</span></div><div class="row"><span>告警处置和值守安排</span><span class="pill">待确认</span></div><div class="row"><span>用户培训与资料维护责任</span><span class="pill">待确认</span></div><div class="row"><span>正式发布授权</span><span class="pill">未取得</span></div></section>
+    </div>
+    <section class="card section"><h2>发布前必须检查</h2><ul><li>候选提案和评测使用相同的文档清单、配置、代码与当前评测集。</li><li>权限撤销、旧版本残留、过期制度、无答案与冲突题分别有真实证据。</li><li>恢复演练记录 RPO/RTO、原件和索引复核；发布操作另按生产授权执行。</li></ul></section>
+    <p class="footer">静态预览：打开本 HTML 即可查看。正式工作台与受保护 API 尚未接入主程序。</p>
+  </main>
+</body>
+</html>

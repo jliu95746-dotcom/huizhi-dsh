@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS hz_audit_events;
+DROP TABLE IF EXISTS hz_outbox;
+DROP TABLE IF EXISTS hz_version_revocations;
+DROP TABLE IF EXISTS hz_active_releases;
+DROP TABLE IF EXISTS hz_release_entries;
+DROP TABLE IF EXISTS hz_releases;
+DROP TABLE IF EXISTS hz_acl_revisions;
+DROP TABLE IF EXISTS hz_acl_rules;
+DROP TABLE IF EXISTS hz_processing_runs;
+DROP TABLE IF EXISTS hz_builds;
+DROP TABLE IF EXISTS hz_document_versions;
+DROP TABLE IF EXISTS hz_documents;
+DROP FUNCTION IF EXISTS hz_reject_immutable_change();

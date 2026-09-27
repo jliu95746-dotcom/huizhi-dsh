@@ -1,0 +1,10 @@
+DROP TRIGGER IF EXISTS hz_p4_release_approval ON hz_releases;
+DROP FUNCTION IF EXISTS hz_p4_require_approved_release();
+DROP TABLE IF EXISTS hz_p4_derived_assets;
+DROP TABLE IF EXISTS hz_p4_rule_suggestions;
+DROP TABLE IF EXISTS hz_p4_entity_aliases;
+DROP TABLE IF EXISTS hz_p4_entities;
+DROP TABLE IF EXISTS hz_p4_release_proposals;
+DROP TRIGGER IF EXISTS hz_p4_review_decisions_immutable ON hz_p4_review_decisions;
+DROP TABLE IF EXISTS hz_p4_review_decisions;
+DROP TABLE IF EXISTS hz_p4_review_cases;

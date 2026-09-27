@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "node scripts/clean-dist.mjs && tsc -p tsconfig.json",
-    "test": "npm run build && node --test dist/test/*.test.js",
+    "test": "npm run build && node --test --test-concurrency=1 dist/test/*.test.js test/weknora-p0-audit.test.mjs",
     "smoke": "npm run build && node scripts/smoke.mjs",
     "routing-demo": "npm run build && node dist/src/cli.js dispatch --input examples/command-save.json --context examples/context-mobile.json --adapter examples/routing-demo-adapter.mjs --format text",
     "routing-smoke": "npm run build && node scripts/routing-smoke.mjs",
@@ -21,6 +21,8 @@
     "setup": "npm run build && node dist/src/cli.js setup",
     "doctor": "npm run build && node dist/src/cli.js doctor",
     "audit-profile": "node scripts/audit-profile.mjs",
+    "weknora:p0:audit": "node scripts/weknora-p0-audit.mjs",
+    "weknora:p0:test": "node --test test/weknora-p0-audit.test.mjs",
     "start": "npm run build && node dist/src/cli.js run"
   },
   "engines": {
@@ -32,10 +34,13 @@
     "@deepseek-ai/dsh-sdk-client": "0.1.5-rc.3",
     "@modelcontextprotocol/sdk": "1.12.0",
     "handlebars": "4.7.8",
-    "js-yaml": "4.2.0"
+    "js-yaml": "4.2.0",
+    "pg": "8.23.0"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
     "@types/node": "22.19.0",
+    "@types/pg": "8.23.1",
     "typescript": "5.9.3"
   }
 }

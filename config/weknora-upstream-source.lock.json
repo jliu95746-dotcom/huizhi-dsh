@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "purpose": "P0 源码与镜像仓库 digest 基线；部署配置和运行态尚未验证",
+  "upstream": {
+    "repository": "https://github.com/Tencent/WeKnora.git",
+    "tag": "v0.8.2",
+    "commit": "3e8b0bfc80b845b2d4b2ed683994748741450a97",
+    "goVersion": "1.26.0",
+    "latestMigration": "000110",
+    "license": "MIT with third-party notices",
+    "requiredPaths": [
+      "LICENSE",
+      "THIRD_PARTY_NOTICES.md",
+      "docker-compose.yml",
+      "go.mod",
+      "migrations/versioned/000110_im_channel_locale.up.sql",
+      "internal/application/access",
+      "internal/application/service/knowledge_process.go",
+      "internal/infrastructure/docparser/engine_registry.go",
+      "internal/infrastructure/chunker/splitter.go",
+      "internal/models/embedding/protocol.go",
+      "internal/models/rerank/protocol.go",
+      "cli/internal/mcp/tools.go"
+    ],
+    "composeImages": {
+      "frontend": "wechatopenai/weknora-ui:${WEKNORA_VERSION:-latest}",
+      "app": "wechatopenai/weknora-app:${WEKNORA_VERSION:-latest}",
+      "docreader": "wechatopenai/weknora-docreader:${WEKNORA_VERSION:-latest}",
+      "sandbox": "wechatopenai/weknora-sandbox:${WEKNORA_VERSION:-latest}",
+      "postgres": "paradedb/paradedb:v0.22.6-pg17",
+      "redis": "redis:7.0-alpine"
+    },
+    "imageDigests": {
+      "frontend": "sha256:83cfd9272e1219b5b5729f89d9c3f8d15a16e1b8cc17cacf638153cc0417290f",
+      "app": "sha256:bc8a534799fcb54045100daf4bc5db86270b38ae45c5f761c410c50b4dcd6cdc",
+      "docreader": "sha256:3c36e7e738ba515315523876d8041f9bb02809145a4e3b331e2550e4bff98b7a",
+      "sandbox": "sha256:cd19e2c4ad4c72746aba52216ae3f1117c45272c347e6b1bd61545b5f8854f6f",
+      "postgres": "sha256:58bf87d2a6f1e72f56590b0f0ae1467e82c3f99ca203dde646672c8ac13148b2",
+      "redis": "sha256:c9d92d840fd011c908f040592857c724ae6d877f2aba5c40ad963276507386b2"
+    }
+  }
+}
